@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EE1AEE6-5F9B-4878-A65B-4188D08DB591}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FaultTrackingSystem</RootNamespace>
+    <AssemblyName>FaultTrackingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fault-tracking-logo-red.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FaultTracking\Main\Customer\Child\AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\ContactUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\ContactUs.Designer.cs">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\Detail.Designer.cs">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\FaultRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\FaultRequest.Designer.cs">
+      <DependentUpon>FaultRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Child\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Parent\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Parent\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Parent\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Parent\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Parent\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Parent\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Parent\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Customer\Parent\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Address.Designer.cs">
+      <DependentUpon>Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Technician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Child\Technician.Designer.cs">
+      <DependentUpon>Technician.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Parent\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Manager\Parent\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Child\FaultList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Child\FaultList.Designer.cs">
+      <DependentUpon>FaultList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Child\GroupingDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Child\GroupingDevice.Designer.cs">
+      <DependentUpon>GroupingDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Child\PackagingDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Child\PackagingDevice.Designer.cs">
+      <DependentUpon>PackagingDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Child\TechnicianDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Child\TechnicianDetail.Designer.cs">
+      <DependentUpon>TechnicianDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Parent\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Staff\Parent\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Technician\Child\FaultList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Technician\Child\FaultList.Designer.cs">
+      <DependentUpon>FaultList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Technician\Child\SparePart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Technician\Child\SparePart.Designer.cs">
+      <DependentUpon>SparePart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Technician\Child\UpdateDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Technician\Child\UpdateDevice.Designer.cs">
+      <DependentUpon>UpdateDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Technician\Parent\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Employee\Technician\Parent\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Home\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Home\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\CustomerLoginErrorMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\CustomerLoginErrorMessageBox.Designer.cs">
+      <DependentUpon>CustomerLoginErrorMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\EmployeeLoginErrorMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\EmployeeLoginErrorMessageBox.Designer.cs">
+      <DependentUpon>EmployeeLoginErrorMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\NoPaymentMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\NoPaymentMessageBox.Designer.cs">
+      <DependentUpon>NoPaymentMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\PasswordChangeSuccessfulMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\PasswordChangeSuccessfulMessageBox.Designer.cs">
+      <DependentUpon>PasswordChangeSuccessfulMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SecurityCodeErrorMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SecurityCodeErrorMessageBox.Designer.cs">
+      <DependentUpon>SecurityCodeErrorMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SendEmailSuccesMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SendEmailSuccesMessageBox.Designer.cs">
+      <DependentUpon>SendEmailSuccesMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SendMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SendMessageBox.Designer.cs">
+      <DependentUpon>SendMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SslSecurePaymentMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SslSecurePaymentMessageBox.Designer.cs">
+      <DependentUpon>SslSecurePaymentMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SuccessCustomerRegisterMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SuccessCustomerRegisterMessageBox.Designer.cs">
+      <DependentUpon>SuccessCustomerRegisterMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SuccessFaultRequestMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\SuccessFaultRequestMessageBox.Designer.cs">
+      <DependentUpon>SuccessFaultRequestMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\TermsMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\TermsMessageBox.Designer.cs">
+      <DependentUpon>TermsMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\UpdateProfileSuccesMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaultTracking\Main\MessageBoxes\UpdateProfileSuccesMessageBox.Designer.cs">
+      <DependentUpon>UpdateProfileSuccesMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaultTracking\Main\Utility\ThemeColor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Child\AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Child\ContactUs.resx">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Child\Detail.resx">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Child\FaultRequest.resx">
+      <DependentUpon>FaultRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Child\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Child\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Parent\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Parent\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Parent\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Customer\Parent\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Manager\Child\Address.resx">
+      <DependentUpon>Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Manager\Child\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Manager\Child\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Manager\Child\Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Manager\Child\Technician.resx">
+      <DependentUpon>Technician.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Manager\Parent\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Staff\Child\FaultList.resx">
+      <DependentUpon>FaultList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Staff\Child\GroupingDevice.resx">
+      <DependentUpon>GroupingDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Staff\Child\PackagingDevice.resx">
+      <DependentUpon>PackagingDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Staff\Child\TechnicianDetail.resx">
+      <DependentUpon>TechnicianDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Staff\Parent\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Technician\Child\FaultList.resx">
+      <DependentUpon>FaultList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Technician\Child\SparePart.resx">
+      <DependentUpon>SparePart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Technician\Child\UpdateDevice.resx">
+      <DependentUpon>UpdateDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Employee\Technician\Parent\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\Home\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\CustomerLoginErrorMessageBox.resx">
+      <DependentUpon>CustomerLoginErrorMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\EmployeeLoginErrorMessageBox.resx">
+      <DependentUpon>EmployeeLoginErrorMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\NoPaymentMessageBox.resx">
+      <DependentUpon>NoPaymentMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\PasswordChangeSuccessfulMessageBox.resx">
+      <DependentUpon>PasswordChangeSuccessfulMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\SecurityCodeErrorMessageBox.resx">
+      <DependentUpon>SecurityCodeErrorMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\SendEmailSuccesMessageBox.resx">
+      <DependentUpon>SendEmailSuccesMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\SendMessageBox.resx">
+      <DependentUpon>SendMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\SslSecurePaymentMessageBox.resx">
+      <DependentUpon>SslSecurePaymentMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\SuccessCustomerRegisterMessageBox.resx">
+      <DependentUpon>SuccessCustomerRegisterMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\SuccessFaultRequestMessageBox.resx">
+      <DependentUpon>SuccessFaultRequestMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\TermsMessageBox.resx">
+      <DependentUpon>TermsMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaultTracking\Main\MessageBoxes\UpdateProfileSuccesMessageBox.resx">
+      <DependentUpon>UpdateProfileSuccesMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="fault-tracking-logo-red.ico" />
+    <Content Include="FaultTracking\Main\Picture\computer.png" />
+    <Content Include="FaultTracking\Main\Picture\drill.png" />
+    <Content Include="FaultTracking\Main\Picture\graphic-design.png" />
+    <Content Include="FaultTracking\Main\Picture\graphic.png" />
+    <Content Include="FaultTracking\Main\Picture\human-resources.png" />
+    <Content Include="FaultTracking\Main\Picture\macbook-pro.png" />
+    <Content Include="FaultTracking\Main\Picture\tools.png" />
+    <None Include="Resources\sparePartOrange40px1.png" />
+    <None Include="Resources\sparePartOrange40px.png" />
+    <None Include="Resources\assignment.png" />
+    <None Include="Resources\administration.png" />
+    <None Include="Resources\shield.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\technicianOrange40px.png" />
+    <None Include="Resources\staffOrange40px.png" />
+    <None Include="Resources\categoryOrange40px.png" />
+    <None Include="Resources\customerOrange40px.png" />
+    <None Include="Resources\update.png" />
+    <None Include="Resources\resetPasswordOrange.png" />
+    <None Include="Resources\userOrange.png" />
+    <None Include="Resources\visaCardBack.jpg" />
+    <None Include="Resources\visaCardFront.jpg" />
+    <None Include="Resources\masterCardBack.jpg" />
+    <None Include="Resources\masterCardFront.jpg" />
+    <None Include="Resources\securityPaymentOrange.png" />
+    <None Include="Resources\cameraOrange.png" />
+    <None Include="Resources\locationOrange.png" />
+    <None Include="Resources\deviceOrange.png" />
+    <None Include="Resources\emailOrange.png" />
+    <None Include="Resources\telephoneCallOrange.png" />
+    <None Include="Resources\homeOrange.png" />
+    <None Include="Resources\promo.png" />
+    <None Include="Resources\visionOrange.png" />
+    <None Include="Resources\missionOrange.png" />
+    <None Include="Resources\resetPassword.png" />
+    <None Include="Resources\userOrange40px.png" />
+    <None Include="Resources\layersOrange40px.png" />
+    <None Include="Resources\informationOrange40px.png" />
+    <None Include="Resources\homeOrange40px.png" />
+    <None Include="Resources\exitOrange40px.png" />
+    <None Include="Resources\addressOrange40px.png" />
+    <None Include="Resources\detailOrange40px.png" />
+    <None Include="Resources\welcome.png" />
+    <None Include="Resources\fault-tracking.png" />
+    <None Include="Resources\openMenuOrange40px.png" />
+    <None Include="Resources\invite.png" />
+    <None Include="Resources\twitter.png" />
+    <None Include="Resources\gmail.png" />
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\hide.png" />
+    <None Include="Resources\show.png" />
+    <None Include="Resources\mces-reco.png" />
+    <None Include="Resources\minimizeOrange.png" />
+    <None Include="Resources\closeOrange.png" />
+    <None Include="Resources\faultTracking.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
